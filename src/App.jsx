@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-
+import List from "./components/List";
 import "./App.css";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     <div>
       <Navbar />
       <Sidebar />
+      <List />
       <Footer />
     </div>
   );
