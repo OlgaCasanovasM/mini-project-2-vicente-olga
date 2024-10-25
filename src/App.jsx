@@ -7,6 +7,7 @@ import List from "./components/List";
 import About from "./components/About";
 import Form from "./components/Form";
 import ItemDetailsPage from "./components/ItemDetailsPage";
+import UpdateForm from "./components/UpdateForm";
 
 import data from "./data/data.json";
 import "./App.css";
@@ -15,6 +16,7 @@ function App() {
   let isCompleted = data.results.filter((property) => property.price !== null);
 
   const [propertiesDisplayed, deleteElement] = useState(isCompleted);
+  const [propertyToEdit, setPropertyToEdit] = useState(null);
 
   const deleteProperty = (propertyId) => {
     const newArray = propertiesDisplayed.filter((propertyObj) => {
@@ -39,10 +41,28 @@ function App() {
     deleteElement(newArray);
   };
 
+  const updateProperty = (updatedProperty) => {
+    const updatedProperties = propertiesDisplayed.map((property) =>
+      property.id === updatedProperty.id ? updatedProperty : property
+    );
+
+    setPropertyToEdit(updatedProperties);
+    setPropertyToEdit(null);
+    deleteElement(updatedProperties);
+  };
+
   return (
     <div className="mainDiv">
       <Navbar />
       <Form callbackToCreate={createProperty} />
+
+      {propertyToEdit && (
+        <UpdateForm
+          property={propertyToEdit}
+          callbackToEdit={updateProperty}
+          onClose={() => setPropertyToEdit(null)}
+        />
+      )}
 
       <div id="content-wrapper">
         <Sidebar />
@@ -60,7 +80,10 @@ function App() {
           <Route
             path="/details/:propertyId"
             element={
-              <ItemDetailsPage propertiesDisplayed={propertiesDisplayed} />
+              <ItemDetailsPage
+                propertiesDisplayed={propertiesDisplayed}
+                callbackToEdit={setPropertyToEdit}
+              />
             }
           />
           <Route path="*" element={<h1>Page Not Found</h1>} />

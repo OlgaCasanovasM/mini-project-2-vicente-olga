@@ -18,6 +18,14 @@ function ItemDetailsPage(props) {
       <p>{property.property_type}</p>
       <p>{property.bedrooms}</p>
 
+      <button
+        onClick={() => {
+          props.callbackToEdit(property);
+        }}
+      >
+        Edit
+      </button>
+
       <p>
         <Link to="/">Back</Link>
       </p>

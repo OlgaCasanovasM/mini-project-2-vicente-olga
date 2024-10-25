@@ -13,6 +13,7 @@ function ListItem({ property, deleteProperty }) {
       <Link className="btn btn-primary" to={`/details/${property.id}`}>
         More details
       </Link>
+
       <button
         onClick={() => {
           deleteProperty(property.id);
