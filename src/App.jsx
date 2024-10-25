@@ -52,7 +52,7 @@ function App() {
             element={
               <List
                 propertiesDisplayed={propertiesDisplayed}
-                callbackToDelete={deleteProperty}
+                deleteProperty={deleteProperty}
               />
             }
           />
