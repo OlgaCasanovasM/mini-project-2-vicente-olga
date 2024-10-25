@@ -1,6 +1,6 @@
 function About() {
   return (
-    <section className="aboutPageSection">
+    <section className="about-page-section">
       <h1>About US</h1>
       <h2>Fairbnb</h2>
       <p>descripción de fakebnb</p>

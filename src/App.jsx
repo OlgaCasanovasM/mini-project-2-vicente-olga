@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import data from "./data/data.json";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import List from "./components/List";
 import About from "./components/About";
+import Form from "./components/Form";
 import ItemDetailsPage from "./components/ItemDetailsPage";
 
+import data from "./data/data.json";
 import "./App.css";
 
 function App() {
@@ -22,13 +23,29 @@ function App() {
     deleteElement(newArray);
   };
 
+  const createProperty = (propertyDetails) => {
+    const propertyIds = propertiesDisplayed.map(
+      (propertyObj) => propertyObj.id
+    );
+    const maxId = Math.max(...propertyIds);
+    const nextId = maxId + 1;
+
+    const newProperty = {
+      ...propertyDetails,
+      id: nextId,
+    };
+
+    const newArray = [newProperty, ...propertiesDisplayed];
+    deleteElement(newArray);
+  };
+
   return (
     <div className="mainDiv">
       <Navbar />
+      <Form callbackToCreate={createProperty} />
 
       <div id="content-wrapper">
         <Sidebar />
-
         <Routes>
           <Route
             path="/"
@@ -56,20 +73,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<>
-
-<Header numberOfMovies={moviesToDisplay.length} />
-
-<Routes>
-  <Route path="/" element={<MovieList moviesToDisplay={moviesToDisplay} callbackToDelete={deleteMovie} />} />
-  <Route path="/about" element={<AboutPage />} />
-  <Route path="/contact" element={<ContactPage />} />
-  <Route path="/movies/:movieId" element={<MovieDetails moviesToDisplay={moviesToDisplay} />} />
-  <Route path="*" element={<h1>Page not found</h1>} />
-</Routes>
-
-<Footer />
-</>
-*/

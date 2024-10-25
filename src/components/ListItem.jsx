@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ItemDetailsPage from "./ItemDetailsPage";
 
 function ListItem({ property, deleteProperty }) {
   return (
@@ -10,6 +9,10 @@ function ListItem({ property, deleteProperty }) {
       <p>
         Price per night: <b>{property.price}</b>
       </p>
+
+      <Link className="btn btn-primary" to={`/details/${property.id}`}>
+        More details
+      </Link>
       <button
         onClick={() => {
           deleteProperty(property.id);
@@ -17,9 +20,6 @@ function ListItem({ property, deleteProperty }) {
       >
         Delete
       </button>
-      <Link className="btn btn-primary" to={`/details/${property.id}`}>
-        More details
-      </Link>
     </div>
   );
 }
