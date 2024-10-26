@@ -54,7 +54,6 @@ function App() {
   return (
     <div className="mainDiv">
       <Navbar />
-      <Form callbackToCreate={createProperty} />
 
       {propertyToEdit && (
         <UpdateForm
@@ -66,28 +65,32 @@ function App() {
 
       <div id="content-wrapper">
         <Sidebar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <List
-                propertiesDisplayed={propertiesDisplayed}
-                deleteProperty={deleteProperty}
-              />
-            }
-          />
-          <Route path="/about" element={<About />} />
-          <Route
-            path="/details/:propertyId"
-            element={
-              <ItemDetailsPage
-                propertiesDisplayed={propertiesDisplayed}
-                callbackToEdit={setPropertyToEdit}
-              />
-            }
-          />
-          <Route path="*" element={<h1>Page Not Found</h1>} />
-        </Routes>
+        <div id="test-id">
+          <Form callbackToCreate={createProperty} />
+
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <List
+                  propertiesDisplayed={propertiesDisplayed}
+                  deleteProperty={deleteProperty}
+                />
+              }
+            />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/details/:propertyId"
+              element={
+                <ItemDetailsPage
+                  propertiesDisplayed={propertiesDisplayed}
+                  callbackToEdit={setPropertyToEdit}
+                />
+              }
+            />
+            <Route path="*" element={<h1>Page Not Found</h1>} />
+          </Routes>
+        </div>
       </div>
 
       <Footer />

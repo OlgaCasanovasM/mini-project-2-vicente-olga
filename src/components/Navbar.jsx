@@ -1,9 +1,10 @@
 function Navbar() {
   return (
     <section id="navbar">
-      <img src="/images/logo-casita.png" />
-      <h1>fairbnb</h1>
-      <hr />
+      <h1>
+        <span id="nav-f-title">f</span>
+        <span id="nav-title">akebnb</span>
+      </h1>
     </section>
   );
 }

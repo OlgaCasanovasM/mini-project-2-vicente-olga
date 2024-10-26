@@ -4,44 +4,82 @@
   box-sizing: border-box;
 }
 
+.playwrite-gb-s-font-title {
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #f0f3f4;
+  font-family: "Raleway", sans-serif;
 }
 
 #navbar {
   display: flex;
   padding: 0;
+  justify-content: center;
   align-items: center;
-  background-color: #005689;
-  height: 5rem;
+  background-color: #f0f3f4;
+  height: 4rem;
+  font-family: "Playwrite GB S";
 }
 
-#navbar img {
-  width: 7%;
-  height: auto;
-  border-radius: 10%;
-  margin-right: 1rem;
-  margin-left: 1rem;
+#nav-f-title {
+  color: #ff895d;
+  font-size: 2rem;
+}
+
+#nav-title {
+  color: black;
 }
 
 #content-wrapper {
   display: flex;
+  border-radius: 10px;
 }
 
 #sidebar {
   display: inline-flex;
   flex-direction: column;
-  flex: 1 0 20%;
+  flex: 1 0 15%;
   height: 100vh;
   position: sticky;
-  top: 0;
   left: 0;
   gap: 1rem;
-  border-right: 1px solid #005689;
-  background-color: #007cb9;
+  background-color: #f0f3f4;
   text-align: center;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ff895d;
 }
 
 #footer-section {
@@ -49,6 +87,7 @@ body {
   justify-content: center;
   background-color: #ff895d;
   width: 100%;
+  font-family: "Raleway", sans-serif;
 }
 
 .apartamentBox {
@@ -58,7 +97,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
 }
 
 .apartamentElement {
@@ -75,7 +114,7 @@ body {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.apartamentElement {
+.apartamentElement:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -108,18 +147,70 @@ body {
 
 .form-container {
   flex-grow: 1;
-  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 96%;
+  margin: 1% 0 1% 2%;
+  padding: 2% 1% 2% 2%;
+  border-radius: 10px;
+  background-color: #f0f3f4;
+  display: flex;
+  color: #5a6971;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form-container h3 {
+  color: #5a6971;
+  margin-bottom: 1.5rem;
+}
+form input {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 8rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  border: #f0f3f4;
+  color: #5a6971;
+}
+
+form button {
+  background-color: #ff895d;
+  color: #5a6971;
+  font-weight: 1000;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: #ff895d;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+form button:hover {
+  background-color: #bac3c868;
+  border: #ff885d81 solid;
 }
 
 .about-page-section {
   flex-grow: 1;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   width: 80%;
+}
+
+#test-id {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.labels-container {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-evenly;
 }
