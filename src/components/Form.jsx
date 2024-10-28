@@ -33,6 +33,8 @@ function Form(props) {
     setPrice("");
     setDescription("");
     setPicture_url("");
+
+    props.toggleForm();
   };
 
   return (
@@ -91,7 +93,9 @@ function Form(props) {
             />
           </label>
         </div>
-        <button type="submit">Create</button>
+        <button type="submit" onClick={props.toggleForm}>
+          Create
+        </button>
       </form>
     </div>
   );

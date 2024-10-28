@@ -2,8 +2,7 @@ function About() {
   return (
     <section className="about-page-section">
       <div id="about-fakebnb-container">
-        <h1>About US</h1>
-        <h2>fakebnb</h2>
+        <h2>About us</h2>
         <p>
           <b>fakebnb</b> is an online platform dedicated exclusively to property
           rentals, designed to provide both owners and travelers with a reliable
@@ -15,14 +14,33 @@ function About() {
         </p>
       </div>
       <div className="collab-container">
-        <div class="collaborators">
+        <div class="collaborators-title">
           <h2>Who we are</h2>
-          <div>
-            <h3>Vicente</h3>
-            <p>this is vicente's description</p>
+        </div>
+        <div class="collaborators">
+          <div id="collaborator1">
+            <img src="https://scontent.fvlc2-1.fna.fbcdn.net/v/t39.30808-6/464717672_8344471362318070_109998814544047567_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=RACRIzC99X0Q7kNvgEsburN&_nc_zt=23&_nc_ht=scontent.fvlc2-1.fna&_nc_gid=A5equxGwwmjtfM5ZptZiGtT&oh=00_AYD6i7gbg-qvwL9WTncxV5StD9jzrHx_ifNaDesnhamJNg&oe=67257628" />
+            <h3>
+              <span id="nav-f-title">V</span>
+              <span id="nav-title">icente </span>
+              <span id="nav-f-title">D</span>
+              <span id="nav-title">uch</span>
+            </h3>
+            <p>
+              I’m an ordinary guy from Valencia, actually I'm learning web
+              development at Ironhack, I love video games, movies, drawing, and
+              traveling. What I adore most in the world is my pets; right now, I
+              have three cats.
+            </p>
           </div>
-          <div class="collaborators">
-            <h3>Olga</h3>
+          <div id="collaborator2">
+            <h3>FOTO</h3>
+            <h3>
+              <span id="nav-f-title">O</span>
+              <span id="nav-title">lga </span>
+              <span id="nav-f-title">C</span>
+              <span id="nav-title">asanovas</span>
+            </h3>
             <p>this is olga's description</p>
           </div>
         </div>

@@ -10,13 +10,17 @@ import ItemDetailsPage from "./components/ItemDetailsPage";
 import UpdateForm from "./components/UpdateForm";
 
 import data from "./data/data.json";
-import "./App.css";
 
 function App() {
   let isCompleted = data.results.filter((property) => property.price !== null);
 
   const [propertiesDisplayed, deleteElement] = useState(isCompleted);
   const [propertyToEdit, setPropertyToEdit] = useState(null);
+  const [isFormVisible, setFormVisible] = useState(false);
+
+  const toggleForm = () => {
+    setFormVisible((prev) => !prev);
+  };
 
   const deleteProperty = (propertyId) => {
     const newArray = propertiesDisplayed.filter((propertyObj) => {
@@ -64,9 +68,11 @@ function App() {
       )}
 
       <div id="content-wrapper">
-        <Sidebar />
+        <Sidebar toggleForm={toggleForm} />
         <div id="test-id">
-          <Form callbackToCreate={createProperty} />
+          {isFormVisible && (
+            <Form toggleForm={toggleForm} callbackToCreate={createProperty} />
+          )}
 
           <Routes>
             <Route
@@ -88,7 +94,7 @@ function App() {
                 />
               }
             />
-            <Route path="*" element={<h1>Page Not Found</h1>} />
+            <Route path="*" element={<h1 id="not-found">Page Not Found</h1>} />
           </Routes>
         </div>
       </div>
