@@ -27,11 +27,21 @@ function About() {
               <span id="nav-title">uch</span>
             </h3>
             <p>
-              I’m an ordinary guy from Valencia, actually I'm learning web
+              I’m an ordinary guy from Valencia, currently I'm learning web
               development at Ironhack, I love video games, movies, drawing, and
               traveling. What I adore most in the world is my pets; right now, I
               have three cats.
             </p>
+            <div className="collaborators-icons-container">
+              <img
+                className="socials-icons"
+                src="src/assets/github-icon.webp"
+              />
+              <img
+                className="socials-icons"
+                src="src/assets/linkedin-icon.webp"
+              />
+            </div>
           </div>
           <div id="collaborator2">
             <h3>FOTO</h3>
@@ -42,6 +52,16 @@ function About() {
               <span id="nav-title">asanovas</span>
             </h3>
             <p>this is olga's description</p>
+            <div className="collaborators-icons-container">
+              <img
+                className="socials-icons"
+                src="src/assets/github-icon.webp"
+              />
+              <img
+                className="socials-icons"
+                src="src/assets/linkedin-icon.webp"
+              />
+            </div>
           </div>
         </div>
       </div>

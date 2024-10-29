@@ -94,7 +94,17 @@ function App() {
                 />
               }
             />
-            <Route path="*" element={<h1 id="not-found">Page Not Found</h1>} />
+            <Route
+              path="*"
+              element={
+                <div className="not-found-container">
+                  <h2 id="not-found">
+                    <span>Opps</span>, nothing to see here<span>!</span>
+                  </h2>
+                  <img src="src/assets/giphy.webp" />
+                </div>
+              }
+            />
           </Routes>
         </div>
       </div>

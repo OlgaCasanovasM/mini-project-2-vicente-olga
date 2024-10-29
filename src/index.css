@@ -145,6 +145,17 @@ body {
   height: 100%;
   object-fit: cover;
 }
+#delete-button {
+  background-color: #ff895d;
+  color: black
+  font-weight: 1000;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: #ff895d;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
 
 .apartamentElement img {
   width: 250px;
@@ -313,21 +324,51 @@ form button:hover {
   color: #666;
 }
 
+#collaborator1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #collaborator1 img {
   width: 30%;
   border-radius: 10px;
 }
 
+#collaborator2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#collaborator2 img{
+   width: 30%;
+  border-radius: 10px;
+}
+
+.collaborators-icons-container{
+  display: flex;
+  justify-content: center;
+}
+
+
 /*NOT FOUND*/
 
-#delete-button {
-  background-color: #ff895d;
-  color: black
-  font-weight: 1000;
-  width: 6rem;
-  height: 2rem;
-  border-radius: 5px;
-  border: #ff895d;
-  font-size: 1rem;
-  margin-top: 1rem;
+.not-found-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
+
+.not-found-container h2{
+  color:black
+  margin-top: 5rem;
+
+}
+
+.not-found-container span{
+  color: #ff895d;
+
+}
+
