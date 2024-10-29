@@ -88,6 +88,7 @@ body {
   justify-content: center;
   background-color: #ff895d;
   width: 100%;
+  height: 2rem;
   font-family: "Raleway", sans-serif;
 }
 
@@ -330,9 +331,17 @@ form button:hover {
   align-items: center;
 }
 
-#collaborator1 img {
+#collaborator1 .photo{
   width: 30%;
   border-radius: 10px;
+}
+
+#collaborator1 .socials-icons{
+  width: 2rem;
+  height: auto;
+  border-radius: 10px;
+  
+
 }
 
 #collaborator2 {
@@ -341,9 +350,18 @@ form button:hover {
   align-items: center;
 }
 
-#collaborator2 img{
+#collaborator2 .photo{
   width: 30%;
   border-radius: 10px;
+  height: 125.06px;
+}
+
+#collaborator2 .socials-icons{
+  width: 2rem;
+  height: auto;
+  border-radius: 10px;
+  
+
 }
 
 .collaborators-icons-container{

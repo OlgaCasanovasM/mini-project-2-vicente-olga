@@ -19,7 +19,10 @@ function About() {
         </div>
         <div class="collaborators">
           <div id="collaborator1">
-            <img src="https://scontent.fvlc2-1.fna.fbcdn.net/v/t39.30808-6/464717672_8344471362318070_109998814544047567_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=RACRIzC99X0Q7kNvgEsburN&_nc_zt=23&_nc_ht=scontent.fvlc2-1.fna&_nc_gid=A5equxGwwmjtfM5ZptZiGtT&oh=00_AYD6i7gbg-qvwL9WTncxV5StD9jzrHx_ifNaDesnhamJNg&oe=67257628" />
+            <img
+              className="photo"
+              src="https://scontent.fvlc2-1.fna.fbcdn.net/v/t39.30808-6/464717672_8344471362318070_109998814544047567_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=RACRIzC99X0Q7kNvgEsburN&_nc_zt=23&_nc_ht=scontent.fvlc2-1.fna&_nc_gid=A5equxGwwmjtfM5ZptZiGtT&oh=00_AYD6i7gbg-qvwL9WTncxV5StD9jzrHx_ifNaDesnhamJNg&oe=67257628"
+            />
             <h3>
               <span id="nav-f-title">V</span>
               <span id="nav-title">icente </span>
@@ -48,7 +51,7 @@ function About() {
             </div>
           </div>
           <div id="collaborator2">
-            <img src="src/assets/stuart-photo.png" />
+            <img className="photo" src="src/assets/stuart-photo.png" />
             <h3>
               <span id="nav-f-title">O</span>
               <span id="nav-title">lga </span>
