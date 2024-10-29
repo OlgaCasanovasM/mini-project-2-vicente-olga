@@ -44,14 +44,19 @@ function About() {
             </div>
           </div>
           <div id="collaborator2">
-            <h3>FOTO</h3>
+            <img src="src/assets/stuart-photo.png" />
             <h3>
               <span id="nav-f-title">O</span>
               <span id="nav-title">lga </span>
               <span id="nav-f-title">C</span>
               <span id="nav-title">asanovas</span>
             </h3>
-            <p>this is olga's description</p>
+            <p>
+              I'm quite a standard mum with a passion for reading, skiing, and
+              just about any sport that gets me moving! Currently, I’m diving
+              into the world of web development through Ironhack and waiting to
+              see where life takes me.
+            </p>
             <div className="collaborators-icons-container">
               <img
                 className="socials-icons"
