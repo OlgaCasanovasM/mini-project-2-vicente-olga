@@ -33,14 +33,18 @@ function About() {
               have three cats.
             </p>
             <div className="collaborators-icons-container">
-              <img
-                className="socials-icons"
-                src="src/assets/github-icon.webp"
-              />
-              <img
-                className="socials-icons"
-                src="src/assets/linkedin-icon.webp"
-              />
+              <a href="" target="blank">
+                <img
+                  className="socials-icons"
+                  src="src/assets/github-icon.webp"
+                />
+              </a>
+              <a href="" target="blank">
+                <img
+                  className="socials-icons"
+                  src="src/assets/linkedin-icon.webp"
+                />
+              </a>
             </div>
           </div>
           <div id="collaborator2">
@@ -58,14 +62,22 @@ function About() {
               see where life takes me.
             </p>
             <div className="collaborators-icons-container">
-              <img
-                className="socials-icons"
-                src="src/assets/github-icon.webp"
-              />
-              <img
-                className="socials-icons"
-                src="src/assets/linkedin-icon.webp"
-              />
+              <a href="https://github.com/OlgaCasanovasM" target="blank">
+                <img
+                  className="socials-icons"
+                  src="src/assets/github-icon.webp"
+                  href=""
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/olga-casanovas-bb29bb89/"
+                target="blank"
+              >
+                <img
+                  className="socials-icons"
+                  src="src/assets/linkedin-icon.webp"
+                />
+              </a>
             </div>
           </div>
         </div>
