@@ -36,13 +36,16 @@ function About() {
               have three cats.
             </p>
             <div className="collaborators-icons-container">
-              <a href="" target="blank">
+              <a href="https://github.com/vicenteduch" target="blank">
                 <img
                   className="socials-icons"
                   src="src/assets/github-icon.webp"
                 />
               </a>
-              <a href="" target="blank">
+              <a
+                href="https://www.linkedin.com/in/vicente-duch-moreno-a7b6a82a2/"
+                target="blank"
+              >
                 <img
                   className="socials-icons"
                   src="src/assets/linkedin-icon.webp"

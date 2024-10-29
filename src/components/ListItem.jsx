@@ -10,7 +10,7 @@ function ListItem({ property, deleteProperty }) {
       </div>
       <div className="list-element-text">
         <h3>{property.name}</h3>
-        <p>{property.host_location}</p>
+        <p>{property.neighbourhood}</p>
         <p>
           Price per night: <b>{property.price}</b>
         </p>

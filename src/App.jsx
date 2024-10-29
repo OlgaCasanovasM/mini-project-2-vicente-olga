@@ -1,20 +1,38 @@
+//REACT IMPORTS//
+
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+
+//COMPONENTS//
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import List from "./components/List";
+import Dashboard from "./components/Dashboard";
 import About from "./components/About";
 import Form from "./components/Form";
 import ItemDetailsPage from "./components/ItemDetailsPage";
 import UpdateForm from "./components/UpdateForm";
 
+//STYLES//
+
+import "./css/about.css";
+import "./css/form.css";
+import "./css/itemDetailsPage.css";
+import "./css/notFound.css";
+
+//JSON DATA//
+
 import data from "./data/data.json";
 
-function App() {
-  let isCompleted = data.results.filter((property) => property.price !== null);
+//CODE/////////////////////////////////
 
-  const [propertiesDisplayed, deleteElement] = useState(isCompleted);
+function App() {
+  let isCompleted = data.results.filter(
+    (property) => property.price !== null && property.neighbourhood !== null
+  );
+
+  const [propertiesDisplayed, setPropertiesToDisplay] = useState(isCompleted);
   const [propertyToEdit, setPropertyToEdit] = useState(null);
   const [isFormVisible, setFormVisible] = useState(false);
 
@@ -26,7 +44,7 @@ function App() {
     const newArray = propertiesDisplayed.filter((propertyObj) => {
       return propertyObj.id !== propertyId;
     });
-    deleteElement(newArray);
+    setPropertiesToDisplay(newArray);
   };
 
   const createProperty = (propertyDetails) => {
@@ -42,7 +60,7 @@ function App() {
     };
 
     const newArray = [newProperty, ...propertiesDisplayed];
-    deleteElement(newArray);
+    setPropertiesToDisplay(newArray);
   };
 
   const updateProperty = (updatedProperty) => {
@@ -52,7 +70,7 @@ function App() {
 
     setPropertyToEdit(updatedProperties);
     setPropertyToEdit(null);
-    deleteElement(updatedProperties);
+    setPropertiesToDisplay(updatedProperties);
   };
 
   return (
@@ -78,7 +96,7 @@ function App() {
             <Route
               path="/"
               element={
-                <List
+                <Dashboard
                   propertiesDisplayed={propertiesDisplayed}
                   deleteProperty={deleteProperty}
                 />

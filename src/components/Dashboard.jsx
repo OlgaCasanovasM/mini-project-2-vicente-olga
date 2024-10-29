@@ -1,6 +1,6 @@
 import ListItem from "./ListItem";
 
-function List(props) {
+function Dashboard(props) {
   return (
     <div className="apartamentBox">
       {props.propertiesDisplayed.map(function (property) {
@@ -16,4 +16,4 @@ function List(props) {
   );
 }
 
-export default List;
+export default Dashboard;

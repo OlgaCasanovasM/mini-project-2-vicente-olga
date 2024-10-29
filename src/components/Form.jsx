@@ -93,9 +93,7 @@ function Form(props) {
             />
           </label>
         </div>
-        <button type="submit" onClick={props.toggleForm}>
-          Create
-        </button>
+        <button type="submit">Create</button>
       </form>
     </div>
   );
