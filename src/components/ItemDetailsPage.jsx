@@ -23,6 +23,7 @@ function ItemDetailsPage(props) {
           <p>{property.bedrooms}</p>
 
           <button
+            id="edit-button"
             onClick={() => {
               props.callbackToEdit(property);
             }}
@@ -31,8 +32,10 @@ function ItemDetailsPage(props) {
           </button>
         </div>
       </div>
-      <p>
-        <Link to="/">Back</Link>
+      <p id="back-button-container">
+        <Link id="back-button" to="/">
+          &lt; &lt; Back
+        </Link>
       </p>
     </div>
   );

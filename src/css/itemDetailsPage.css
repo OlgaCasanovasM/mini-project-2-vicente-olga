@@ -44,7 +44,7 @@
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
 }
 .propertyDetails img {
   width: 100%;
@@ -55,5 +55,32 @@
 .propertyDetails p {
   width: 80%;
   height: auto;
+}
+
+#edit-button {
+  background-color: #ff895d;
+  color: #5a6971;
+  font-weight: 1000;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: #ff895d;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+#back-button-container {
+  width: 6rem;
+  height: 1.5rem;
+  background-color: #f0f3f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+#back-button {
+  background-color: #f0f3f4;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
   text-align: center;
 }
