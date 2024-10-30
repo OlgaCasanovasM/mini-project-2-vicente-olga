@@ -23,40 +23,42 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
 
   return (
     <div className="form-container">
-      <h1>Update Property</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Property Name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <label>
-          Image URL:
-          <input
-            type="url"
-            value={picture_url}
-            onChange={(e) => setPicture_url(e.target.value)}
-          />
-        </label>
-        <label>
-          Description:
-          <input
-            type="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </label>
-        <label>
-          Price:
-          <input
-            type="text"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-        </label>
+        <h3>Update Property</h3>
+        <div className="labels-container">
+          <label>
+            Property Name:
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+          <label>
+            Image URL:
+            <input
+              type="url"
+              value={picture_url}
+              onChange={(e) => setPicture_url(e.target.value)}
+            />
+          </label>
+          <label>
+            Description:
+            <input
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </label>
+          <label>
+            Price:
+            <input
+              type="text"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+            />
+          </label>
+        </div>
         <button type="submit">Update</button>
       </form>
     </div>

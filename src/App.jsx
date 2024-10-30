@@ -77,19 +77,19 @@ function App() {
     <div className="mainDiv">
       <Navbar />
 
-      {propertyToEdit && (
-        <UpdateForm
-          property={propertyToEdit}
-          callbackToEdit={updateProperty}
-          onClose={() => setPropertyToEdit(null)}
-        />
-      )}
-
       <div id="content-wrapper">
         <Sidebar toggleForm={toggleForm} />
         <div id="test-id">
           {isFormVisible && (
             <Form toggleForm={toggleForm} callbackToCreate={createProperty} />
+          )}
+
+          {propertyToEdit && (
+            <UpdateForm
+              property={propertyToEdit}
+              callbackToEdit={updateProperty}
+              onClose={() => setPropertyToEdit(null)}
+            />
           )}
 
           <Routes>

@@ -6,17 +6,6 @@ function Form(props) {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
 
-  // const [form, setForm] = useState({
-  //   name: "",
-  //   imgURL: "",
-  //   description: "",
-  //   price: 0,
-  // });
-
-  // const handleChange = (e) => {
-  //   setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
