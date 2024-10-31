@@ -7,6 +7,7 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
   const [price, setPrice] = useState(property.price);
   const [rooms, setRooms] = useState(property.beds);
   const [propertType, setPropertType] = useState(property.room_type);
+  const [neighbourhood, setNeighbourhood] = useState(property.neighbourhood);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
     const updatedProperty = {
       ...property,
       name,
+      neighbourhood,
       picture_url,
       description,
       price,
@@ -39,6 +41,16 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
             />
           </label>
           <label>
+            Neighbourhood:
+            <input
+              type="text"
+              value={neighbourhood}
+              onChange={(e) => {
+                setNeighbourhood(e.target.value);
+              }}
+            />
+          </label>
+          <label>
             Image URL:
             <input
               type="url"
@@ -46,16 +58,9 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
               onChange={(e) => setPicture_url(e.target.value)}
             />
           </label>
+
           <label>
-            Description:
-            <input
-              type="text"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-          </label>
-          <label>
-            Price:
+            Price per night:
             <input
               type="text"
               value={price}
@@ -76,6 +81,15 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
               type="number"
               value={rooms}
               onChange={(e) => setRooms(e.target.value)}
+            />
+          </label>
+          <label>
+            Description:
+            <input
+              id="description-input"
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             />
           </label>
         </div>

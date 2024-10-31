@@ -9,6 +9,7 @@
   height: 1.3rem;
   border-radius: 5px;
   margin-top: 1rem;
+  cursor: pointer;
 }
 #delete-button:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -59,6 +60,10 @@
   font-weight: bolder;
   font-size: larger;
 }
+#per-night-text {
+  color: #5a6971;
+  font-weight: lighter;
+}
 #property-type {
   margin-top: 0.5rem;
   color: #5a6971;
@@ -73,6 +78,7 @@
   width: 527px;
   height: auto;
   margin-left: 2rem;
+  border-radius: 15px;
 }
 
 .propertyDetails p {

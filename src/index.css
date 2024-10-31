@@ -33,11 +33,27 @@ body {
 #navbar {
   display: flex;
   padding: 0;
-  justify-content: center;
   align-items: center;
   background-color: #f0f3f4;
   height: 4rem;
+  width: 100%;
   font-family: "Playwrite GB S";
+  justify-content: space-between;
+}
+
+nav input {
+  border-radius: 10px;
+  padding: 0.3rem;
+  font-family: "Raleway";
+  width: 15rem;
+}
+
+#logo {
+  margin-left: 5rem;
+}
+
+#search-bar {
+  margin-right: 7rem;
 }
 
 #nav-f-title {
@@ -59,24 +75,32 @@ body {
 #sidebar {
   display: inline-flex;
   flex-direction: column;
-  flex: 1 0 15%;
+  flex: 1 0 10rem;
   height: 100vh;
   position: sticky;
-  left: 0;
   gap: 1rem;
   background-color: #f0f3f4;
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-link-container {
+  display: inline-flex;
+  flex-direction: column;
+  position: fixed;
+  margin-bottom: 10rem;
 }
 
 .nav-link {
   text-decoration: none;
   color: #333;
-  padding: 10px 15px;
-  border-radius: 10px;
   align-items: center;
   cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 17rem;
 }
 
 .nav-link:hover {
@@ -96,7 +120,6 @@ body {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 3rem;

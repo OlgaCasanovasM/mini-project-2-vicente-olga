@@ -1,9 +1,10 @@
 form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
+
 .form-container h3 {
   color: #5a6971;
   margin-bottom: 1.5rem;
@@ -11,10 +12,15 @@ form {
 form input {
   margin: 1rem;
   width: 10rem;
-  height: 1.5rem;
+  height: 2rem;
   border-radius: 4px;
   border: #f0f3f4;
   color: #5a6971;
+  padding: 0.5rem;
+}
+
+#description-input {
+  width: 30rem;
 }
 
 form button {
@@ -45,15 +51,13 @@ form button:hover {
 /*EDIT FORM*/
 
 .form-container {
-  flex-grow: 1;
-  flex-direction: row;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 96%;
   margin: 1% 0 1% 2%;
   padding: 2% 1% 2% 2%;
   border-radius: 10px;
   background-color: #f0f3f4;
-  display: flex;
   color: #5a6971;
 }

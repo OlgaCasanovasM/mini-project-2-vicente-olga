@@ -25,7 +25,7 @@ import "./css/notFound.css";
 
 import data from "./data/data.json";
 
-//CODE/////////////////////////////////
+//CODE//
 
 function App() {
   let isCompleted = data.results.filter(
@@ -35,33 +35,27 @@ function App() {
   const [propertiesDisplayed, setPropertiesToDisplay] = useState(isCompleted);
   const [propertyToEdit, setPropertyToEdit] = useState(null);
   const [isFormVisible, setFormVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const toggleForm = () => {
-    setFormVisible((prev) => !prev);
-  };
-
-  const deleteProperty = (propertyId) => {
-    const newArray = propertiesDisplayed.filter((propertyObj) => {
-      return propertyObj.id !== propertyId;
-    });
-    setPropertiesToDisplay(newArray);
-  };
+  //CREATE NEW PROPERTY FORM//
 
   const createProperty = (propertyDetails) => {
     const propertyIds = propertiesDisplayed.map(
       (propertyObj) => propertyObj.id
     );
-    const maxId = Math.max(...propertyIds);
-    const nextId = maxId + 1;
+
+    let maxId = propertyIds.length;
 
     const newProperty = {
       ...propertyDetails,
-      id: nextId,
+      id: maxId++,
     };
 
     const newArray = [newProperty, ...propertiesDisplayed];
     setPropertiesToDisplay(newArray);
   };
+
+  //EDIT PROPERTY FORM//
 
   const updateProperty = (updatedProperty) => {
     const updatedProperties = propertiesDisplayed.map((property) =>
@@ -69,14 +63,40 @@ function App() {
     );
 
     setPropertyToEdit(updatedProperties);
-    setPropertyToEdit(null);
     setPropertiesToDisplay(updatedProperties);
   };
 
+  //SHOW/HIDE ADD PROPERTY FORM//
+
+  const toggleForm = () => {
+    setFormVisible((prev) => !prev);
+  };
+
+  // SEARCH BAR
+
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const filteredProperties = searchQuery
+    ? propertiesDisplayed.filter(
+        (property) =>
+          property.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          property.price.includes(searchQuery)
+      )
+    : propertiesDisplayed;
+
+  //DELETE PROPERTY//
+
+  const deleteProperty = (propertyId) => {
+    const newArray = propertiesDisplayed.filter((propertyObj) => {
+      return propertyObj.id !== propertyId;
+    });
+    setPropertiesToDisplay(newArray);
+  };
   return (
     <div className="mainDiv">
-      <Navbar />
-
+      <Navbar query={searchQuery} onSearchChange={handleSearch} />
       <div id="content-wrapper">
         <Sidebar toggleForm={toggleForm} />
         <div id="test-id">
@@ -97,7 +117,7 @@ function App() {
               path="/"
               element={
                 <Dashboard
-                  propertiesDisplayed={propertiesDisplayed}
+                  propertiesDisplayed={filteredProperties}
                   deleteProperty={deleteProperty}
                 />
               }

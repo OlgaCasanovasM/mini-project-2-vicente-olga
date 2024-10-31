@@ -7,12 +7,14 @@ function Form(props) {
   const [price, setPrice] = useState("");
   const [rooms, setRooms] = useState(0);
   const [propertType, setPropertType] = useState("");
+  const [neighbourhood, setNeighbourhood] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const propertyDetails = {
       name: name,
+      neighbourhood: neighbourhood,
       price: price,
       description: description,
       picture_url: picture_url,
@@ -28,6 +30,7 @@ function Form(props) {
     setPicture_url("");
     setPropertType("");
     setRooms("");
+    setNeighbourhood("");
 
     props.toggleForm();
   };
@@ -50,6 +53,18 @@ function Form(props) {
             />
           </label>
           <label>
+            Neighbourhood:
+            <input
+              type="text"
+              name="neighbourhood"
+              value={neighbourhood}
+              placeholder="  Malasaña"
+              onChange={(e) => {
+                setNeighbourhood(e.target.value);
+              }}
+            />
+          </label>
+          <label>
             Image URL:
             <input
               type="url"
@@ -59,6 +74,37 @@ function Form(props) {
               onChange={(e) => {
                 setPicture_url(e.target.value);
               }}
+            />
+          </label>
+
+          <label>
+            Price:
+            <input
+              id="price"
+              type="text"
+              name="price"
+              placeholder=" Price / Night"
+              value={price}
+              onChange={(e) => {
+                setPrice(e.target.value);
+              }}
+            />
+          </label>
+          <label>
+            Property type:
+            <input
+              type="text"
+              placeholder=" Full House"
+              value={propertType}
+              onChange={(e) => setPropertType(e.target.value)}
+            />
+          </label>
+          <label>
+            Number of Rooms:
+            <input
+              type="number"
+              value={rooms}
+              onChange={(e) => setRooms(e.target.value)}
             />
           </label>
           <label>
@@ -71,36 +117,6 @@ function Form(props) {
               onChange={(e) => {
                 setDescription(e.target.value);
               }}
-            />
-          </label>
-
-          <label>
-            Price:
-            <input
-              id="price"
-              type="text"
-              name="price"
-              placeholder="  Euros"
-              value={price}
-              onChange={(e) => {
-                setPrice(e.target.value);
-              }}
-            />
-          </label>
-          <label>
-            Property type:
-            <input
-              type="text"
-              value={propertType}
-              onChange={(e) => setPropertType(e.target.value)}
-            />
-          </label>
-          <label>
-            Number of Rooms:
-            <input
-              type="number"
-              value={rooms}
-              onChange={(e) => setRooms(e.target.value)}
             />
           </label>
         </div>
