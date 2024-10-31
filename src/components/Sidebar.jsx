@@ -11,7 +11,7 @@ function Sidebar(props) {
           About
         </NavLink>
         <div className="nav-link" onClick={props.toggleForm}>
-          + Add Property
+          + Add your house
         </div>
       </div>
     </section>
