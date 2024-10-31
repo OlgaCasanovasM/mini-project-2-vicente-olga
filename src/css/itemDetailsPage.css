@@ -5,14 +5,14 @@
 }
 
 #delete-button {
-  background-color: #ff895d;
-  color: black;
-  width: 6rem;
-  height: 2rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-radius: 5px;
-  border: #ff895d;
-  font-size: 1rem;
   margin-top: 1rem;
+}
+#delete-button:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: #f0f3f4;
 }
 
 .propertyDetails {
@@ -82,7 +82,7 @@
 
 #edit-button {
   background-color: #ff895d;
-  color: #5a6971;
+  color: black;
   font-weight: 1000;
   width: 6rem;
   height: 2rem;

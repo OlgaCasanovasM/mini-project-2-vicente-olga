@@ -9,9 +9,8 @@ form {
   margin-bottom: 1.5rem;
 }
 form input {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  width: 8rem;
+  margin: 1rem;
+  width: 10rem;
   height: 1.5rem;
   border-radius: 4px;
   border: #f0f3f4;
@@ -20,7 +19,7 @@ form input {
 
 form button {
   background-color: #ff895d;
-  color: #5a6971;
+  color: black;
   font-weight: 1000;
   width: 6rem;
   height: 2rem;
@@ -40,6 +39,7 @@ form button:hover {
   flex-grow: 1;
   width: 100%;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 /*EDIT FORM*/

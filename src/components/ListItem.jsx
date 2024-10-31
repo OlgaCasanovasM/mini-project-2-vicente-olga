@@ -15,14 +15,13 @@ function ListItem({ property, deleteProperty }) {
           Price per night: <b>{property.price}</b>
         </p>
 
-        <button
+        <img
           onClick={() => {
             deleteProperty(property.id);
           }}
           id="delete-button"
-        >
-          Delete
-        </button>
+          src="src/assets/delete-xxl.png"
+        />
       </div>
     </div>
   );
