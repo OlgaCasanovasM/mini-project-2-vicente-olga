@@ -23,7 +23,6 @@ function ItemDetailsPage(props) {
           <h2 id="property-name">{property.name}</h2>
           <p id="property-price">{property.price}</p>
           <p id="property-description">{property.description}</p>
-          <p id="neighborhood-overview">{property.neighborhood_overview}</p>
           <p id="property-type">{property.property_type}</p>
           <p id="property-bedrooms">Number of Bedrooms: {property.bedrooms}</p>
 
