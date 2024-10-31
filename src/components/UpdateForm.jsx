@@ -73,7 +73,7 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
           <label>
             Number of Rooms:
             <input
-              type="text"
+              type="number"
               value={rooms}
               onChange={(e) => setRooms(e.target.value)}
             />
