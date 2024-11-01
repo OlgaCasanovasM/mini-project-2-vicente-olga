@@ -6,7 +6,7 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
   const [description, setDescription] = useState(property.description);
   const [price, setPrice] = useState(property.price);
   const [rooms, setRooms] = useState(property.beds);
-  const [propertType, setPropertType] = useState(property.room_type);
+  const [room_type, setPropertyType] = useState(property.room_type);
   const [neighbourhood, setNeighbourhood] = useState(property.neighbourhood);
 
   const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
       description,
       price,
       rooms,
-      propertType,
+      room_type,
     };
 
     callbackToEdit(updatedProperty);
@@ -71,8 +71,8 @@ function UpdateForm({ property, callbackToEdit, onClose }) {
             Property type:
             <input
               type="text"
-              value={propertType}
-              onChange={(e) => setPropertType(e.target.value)}
+              value={room_type}
+              onChange={(e) => setPropertyType(e.target.value)}
             />
           </label>
           <label>

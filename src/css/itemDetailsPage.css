@@ -51,6 +51,10 @@
   color: #5a6971;
   font-weight: bolder;
 }
+#property-neighbourhood {
+  margin-top: 0.5rem;
+  color: #5a6971;
+}
 #property-description {
   margin-top: 0.5rem;
   color: #5a6971;

@@ -6,7 +6,7 @@ function Form(props) {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [rooms, setRooms] = useState(0);
-  const [propertType, setPropertType] = useState("");
+  const [room_type, setPropertyType] = useState("");
   const [neighbourhood, setNeighbourhood] = useState("");
 
   const handleSubmit = (e) => {
@@ -19,7 +19,7 @@ function Form(props) {
       description: description,
       picture_url: picture_url,
       rooms: rooms,
-      propertType: propertType,
+      room_type: room_type,
     };
 
     props.callbackToCreate(propertyDetails);
@@ -28,8 +28,8 @@ function Form(props) {
     setPrice("");
     setDescription("");
     setPicture_url("");
-    setPropertType("");
-    setRooms("");
+    setPropertyType("");
+    setRooms(0);
     setNeighbourhood("");
 
     props.toggleForm();
@@ -95,8 +95,8 @@ function Form(props) {
             <input
               type="text"
               placeholder=" Full House"
-              value={propertType}
-              onChange={(e) => setPropertType(e.target.value)}
+              value={room_type}
+              onChange={(e) => setPropertyType(e.target.value)}
             />
           </label>
           <label>

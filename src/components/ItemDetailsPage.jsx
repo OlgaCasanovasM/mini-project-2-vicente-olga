@@ -21,12 +21,13 @@ function ItemDetailsPage(props) {
         </div>
         <div id="details-container-text">
           <h2 id="property-name">{property.name}</h2>
+          <p id="property-neighbourhood">{property.neighbourhood}</p>
           <p id="property-price">
             {property.price} <span id="per-night-text">per night</span>
           </p>
           <p id="property-description">{property.description}</p>
-          <p id="property-type">{property.property_type}</p>
-          <p id="property-bedrooms">Number of Bedrooms: {property.bedrooms}</p>
+          <p id="property-type">{property.room_type}</p>
+          <p id="property-bedrooms">Number of Bedrooms: {property.rooms}</p>
 
           <button
             id="edit-button"
